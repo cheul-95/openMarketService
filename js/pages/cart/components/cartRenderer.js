@@ -33,7 +33,7 @@ export async function cartRender() {
   if (cartCount == 0) {
     const cartList = document.querySelector(".cart__list");
     const cartListNoneInnerHTML = `
-          <div class="cart-empty" aria-labelledby="cart-empty-title">
+          <div class="cart-empty" aria-label="cart-empty-title">
             <header class="cart-empty__header">
               <h2 id="cart-empty-title" class="cart-empty__title">
                 장바구니에 담긴 상품이 없습니다.
