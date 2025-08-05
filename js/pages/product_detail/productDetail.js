@@ -12,7 +12,7 @@ async function loadComponent(elementId, filePath) {
   }
   //헤더가 그려지는 부분에서 import 진행시 돔요소 읽어 옴.
   if (elementId == "header") {
-    const { initHeader } = await import("../../components/header.js");
+    const { initHeader } = await import("../../components/header/header.js");
     initHeader();
   }
 }

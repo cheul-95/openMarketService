@@ -1,9 +1,9 @@
-import { getCart } from "../../../../js/api/cart.js";
-import { checkStock } from "../../../../js/api/product.js";
-import { loadComponent } from "../../../../js/components/loadComponent.js";
-import { isSeller } from "../../../../js/components/user.js";
-import { user } from "../../../../js/core/config.js";
-import { loginModalOpen } from "../../../../js/pages/cart/components/cartModal.js";
+import { getCart } from "../../../api/cart.js";
+import { checkStock } from "../../../api/product.js";
+import { loadComponent } from "../../../components/loadComponent.js";
+import { isSeller } from "../../../components/user.js";
+import { user } from "../../../core/config.js";
+import { loginModalOpen } from "./cartModal.js";
 export function cartUserCheck() {
   //유저인지 체크
   if (user == null) {
@@ -25,7 +25,7 @@ export async function cartRender() {
   await loadComponent("footer", "./components/footer.html");
   const $cart = document.querySelector(".header__menu-cart");
   $cart.parentElement.querySelector("img").src =
-    "../../../../assets/icons/icon-shopping-cart-2.svg";
+    "../assets/icons/icon-shopping-cart-2.svg";
   $cart.style.color = "#21bf48";
   const response = await getCart();
   const cartCount = response.data.count;
@@ -84,9 +84,9 @@ async function renderHtml(data) {
               <p class="cart-item__info-shipping">${shipping_method} / ${shipping_fee.toLocaleString()} 원</p>
             </div>
             <div class="cart-item__quantity">
-              <button type="button" class="cart-item__quantity-btn minus" ><img src="../../../../assets/icons/icon-minus-line.svg" alt="수량 감소"  /></button>
+              <button type="button" class="cart-item__quantity-btn minus" ><img src="../assets/icons/icon-minus-line.svg" alt="수량 감소"  /></button>
               <input type="number" class="cart-item__quantity-input" value="${cartNum}" aria-label="수량 입력" readonly/>
-              <button type="button" class="cart-item__quantity-btn plus" ><img src="../../../../assets/icons/icon-plus-line.svg" alt="수량 증가" /></button>
+              <button type="button" class="cart-item__quantity-btn plus" ><img src="../assets/icons/icon-plus-line.svg" alt="수량 증가" /></button>
             </div>
             <div class="cart-item__price-wrap">
               <p class="cart-item__price">${(
@@ -94,7 +94,7 @@ async function renderHtml(data) {
               ).toLocaleString()}원</p>
               <button class="cart-item__order-btn">주문하기</button>
             </div>
-            <button type="button" class="cart-item__delete"><img src="../../../../assets/icons/icon-delete.svg" alt="장바구니 삭제"></button>
+            <button type="button" class="cart-item__delete"><img src="../assets/icons/icon-delete.svg" alt="장바구니 삭제"></button>
           </article>`;
 
       const NoStockInnerHTML = `
@@ -112,9 +112,9 @@ async function renderHtml(data) {
           <p class="cart-item__info-shipping">${shipping_method} / ${shipping_fee.toLocaleString()} 원</p>
         </div>
         <div class="cart-item__quantity">
-          <button type="button" class="cart-item__quantity-btn minus" ><img src="../../../../assets/icons/icon-minus-line.svg" alt="수량 감소"  /></button>
+          <button type="button" class="cart-item__quantity-btn minus" ><img src="../assets/icons/icon-minus-line.svg" alt="수량 감소"  /></button>
           <input type="number" class="cart-item__quantity-input" value="${cartNum}" aria-label="수량 입력" readonly/>
-          <button type="button" class="cart-item__quantity-btn plus" ><img src="../../../../assets/icons/icon-plus-line.svg" alt="수량 증가" /></button>
+          <button type="button" class="cart-item__quantity-btn plus" ><img src="../assets/icons/icon-plus-line.svg" alt="수량 증가" /></button>
           <p class="cart-item__no-stock">재고 부족 ${stock}개</p>
         </div>
         <div class="cart-item__price-wrap">
@@ -123,7 +123,7 @@ async function renderHtml(data) {
           ).toLocaleString()}원</p>
           <button class="cart-item__order-btn" disabled>주문하기</button>
         </div>
-        <button type="button" class="cart-item__delete"><img src="../../../../assets/icons/icon-delete.svg" alt="장바구니 삭제"></button>
+        <button type="button" class="cart-item__delete"><img src="../assets/icons/icon-delete.svg" alt="장바구니 삭제"></button>
       </article>`;
 
       const cartList = document.querySelector(".cart__list");
