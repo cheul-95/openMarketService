@@ -1,4 +1,4 @@
-import { request, setTokens } from "/js/core/config.js";
+import { request, setTokens } from "./js/core/config.js";
 
 /**
  * 로그인

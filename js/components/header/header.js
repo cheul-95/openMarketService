@@ -1,10 +1,10 @@
+import { getTokenStatus } from "../../core/config.js";
+import { getHeaderGNB } from "../components/headerRender.js";
 import {
   logoutGNBEvent,
   searchGNBEvent,
   toggleGNBEvent,
-} from "./js/components/header/components/headerEventHandlers.js";
-import { getHeaderGNB } from "./js/components/header/components/headerRender.js";
-import { getTokenStatus } from "./js/core/config.js";
+} from "./components/headerEventHandlers.js";
 export function initHeader() {
   //로그인 토큰 가져오기
   const loginStatus = getTokenStatus();

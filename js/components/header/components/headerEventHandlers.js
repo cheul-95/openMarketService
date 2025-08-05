@@ -1,4 +1,4 @@
-import { logout } from "/js/components/user.js";
+import { logout } from "../../../components/user.js";
 export function searchGNBEvent() {
   // 검색기능
   const $searchForm = document.querySelector(".header__search-form");
@@ -35,9 +35,9 @@ export function toggleGNBEvent() {
         const $cartImg = document
           .querySelector(".header__menu-cart")
           .parentElement.querySelector("img");
-        $cartImg.src = "/assets/icons/icon-shopping-cart-2.svg";
+        $cartImg.src = "../../../../assets/icons/icon-shopping-cart-2.svg";
         const $myPageImg = document.querySelector(".dropdown__button img");
-        $myPageImg.src = "/assets/icons/icon-user-2.svg";
+        $myPageImg.src = "../../../../assets/icons/icon-user-2.svg";
       } else {
         $headerMyText.forEach(menu => {
           menu.style.color = "#767676"; // 글자색
@@ -48,10 +48,10 @@ export function toggleGNBEvent() {
         //마이페이지 예외처리
         const currentPath = window.location.pathname;
         if (currentPath !== "/pages/cart.html") {
-          $cartImg.src = "/assets/icons/icon-shopping-cart.svg";
+          $cartImg.src = "../../../../assets/icons/icon-shopping-cart.svg";
         }
         const $myPageImg = document.querySelector(".dropdown__button img");
-        $myPageImg.src = "/assets/icons/icon-user.svg";
+        $myPageImg.src = "../../../../assets/icons/icon-user.svg";
       }
     });
   }

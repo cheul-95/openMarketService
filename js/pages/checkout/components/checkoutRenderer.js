@@ -1,5 +1,5 @@
-import { getProduct } from "/js/api/product.js";
-import { loadComponent } from "/js/components/loadComponent.js";
+import { getProduct } from "../../../js/api/product.js";
+import { loadComponent } from "../../../js/components/loadComponent.js";
 export async function chkCartItem() {
   let items = JSON.parse(sessionStorage.getItem("orderList")) || [];
   if (!Array.isArray(items)) {

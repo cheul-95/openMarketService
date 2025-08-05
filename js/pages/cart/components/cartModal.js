@@ -1,6 +1,6 @@
-import { updateCartItem } from "/js/api/cart.js";
-import { checkStock } from "/js/api/product.js";
-import { gotoReferrer } from "/js/components/useNavigate.js";
+import { updateCartItem } from "../../js/api/cart.js";
+import { checkStock } from "../../js/api/product.js";
+import { gotoReferrer } from "../../js/components/useNavigate.js";
 //로그인 모달
 export function loginModalOpen() {
   const modal = document.getElementById("modal-login");
@@ -28,6 +28,7 @@ export function loginModalOpen() {
   $loginModal_confirm.addEventListener("click", e => {
     e.preventDefault();
     window.location.href = "/pages/login.html"; // 홈으로 이동
+    window.location.href = "../../../../pages/login.html"; // 홈으로 이동
   });
 }
 export async function modalCalc() {

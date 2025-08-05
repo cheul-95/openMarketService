@@ -1,5 +1,5 @@
-import { createCartOrder, createDirectOrder } from "/js/api/order.js";
-import { checkStock } from "/js/api/product.js";
+import { createCartOrder, createDirectOrder } from "../../../api/order.js";
+import { checkStock } from "../../../api/product.js";
 export function validationForm() {}
 export function confirmInfoAgreement() {
   //정보제공 동의

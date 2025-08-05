@@ -1,4 +1,4 @@
-import { request } from "/js/core/config.js";
+import { request } from "./js/core/config.js";
 
 /**
  * 모든 상품 목록 조회

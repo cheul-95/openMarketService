@@ -1,4 +1,4 @@
-import { request } from "/js/core/config.js";
+import { request } from "./js/core/config.js";
 
 /**
  * 직접 주문 생성 (장바구니 사용하지 않고)
