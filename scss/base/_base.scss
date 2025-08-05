@@ -1,0 +1,15 @@
+// ===========================================
+// BASE STYLES
+// ===========================================
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%); // modern browsers 추가 대응
+  white-space: nowrap; // 줄바꿈 방지 (추가 안전 처리)
+}

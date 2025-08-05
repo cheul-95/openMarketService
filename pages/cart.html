@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니 : HODU</title>
+    <meta
+      name="description"
+      content="담은 상품들을 확인하고 수량을 수정하거나 삭제할 수 있는 장바구니 페이지입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="장바구니 - HODU" />
+    <meta
+      property="og:description"
+      content="담은 상품들을 확인하고 수량을 수정하거나 삭제할 수 있는 장바구니 페이지입니다."
+    />
+    <meta
+      property="og:image"
+      content="../assets/images/icon-shopping-cart.svg"
+    />
+    <meta property="og:url" content="/pages/cart.html" />
+
+    <!-- 검색결과에 포함시키지 않기-->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+
+    <link rel="icon" href="../assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="cart">
+      <h2 class="cart__title">장바구니</h2>
+      <header class="cart__header">
+        <label class="cart__header-checkbox-label" for="checkAll">
+          <input
+            type="checkbox"
+            class="cart__header__checkbox-input"
+            id="checkAll"
+            aria-label="전체 상품 선택"
+            checked
+          />
+          <span class="cart__header__checkbox-span" aria-hidden="true"></span>
+        </label>
+        <span class="cart__header-info">상품정보</span>
+        <span class="cart__header-quantity">수량</span>
+        <span class="cart__header-price">상품금액</span>
+      </header>
+      <section class="cart__list" aria-label="장바구니 상품 목록"></section>
+      <section class="cartOrder-summary" aria-labelledby="order-summary-title">
+        <h3 class="sr-only">주문 요약</h3>
+        <dl class="cartOrder-summary__list">
+          <div class="cartOrder-summary__item">
+            <dt class="cartOrder-summary__term">총 상품금액</dt>
+            <dd class="cartOrder-summary__value">46500</dd>
+          </div>
+          <div class="cartOrder-summary__item">
+            <dt class="cartOrder-summary__term">배송비</dt>
+            <dd class="cartOrder-summary__value">0</dd>
+          </div>
+          <div class="cartOrder-summary__item cartOrder-summary__total">
+            <dt class="cartOrder-summary__term">결제 예정 금액</dt>
+            <dd
+              class="cartOrder-summary__value cartOrder-summary__value--total"
+            >
+              46500
+            </dd>
+          </div>
+        </dl>
+      </section>
+      <div class="cartOrder__btn-wrap">
+        <button type="button" class="cartOrder-summary__submit">
+          주문하기
+        </button>
+      </div>
+    </main>
+    <script type="module" src="../js/pages/cart/cart.js"></script>
+    <div id="footer"></div>
+    <!-- 수량 수정 모달 -->
+    <dialog id="modal-quantity" class="modal modal--quantity">
+      <button class="modal__close" aria-label="닫기">
+        <img src="../../assets/icons/icon-delete.svg" alt="" />
+      </button>
+      <div class="modal__content">
+        <div class="modal__quantity-control">
+          <button type="button" class="modal__quantity-btn minus">
+            <img src="../../assets/icons/icon-minus-line.svg" alt="마이너스" />
+          </button>
+          <input type="number" class="modal__quantity-input" value="1" />
+          <button type="button" class="modal__quantity-btn plus">
+            <img src="../../assets/icons/icon-plus-line.svg" alt="플러스" />
+          </button>
+        </div>
+        <div class="modal__footer">
+          <button class="modal__btn modal__btn--cancel">취소</button>
+          <button class="modal__btn modal__btn--confirm">수정</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- 상품 삭제 모달 -->
+    <dialog id="modal-delete" class="modal modal--delete">
+      <button class="modal__close" aria-label="닫기">
+        <img src="../../assets/icons/icon-delete.svg" alt="" />
+      </button>
+      <div class="modal__content">
+        <p class="modal__message">상품을 삭제하시겠습니까?</p>
+        <div class="modal__footer">
+          <button class="modal__btn modal__btn--cancel">취소</button>
+          <button class="modal__btn modal__btn--confirm">확인</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- 로그인 안내 모달 -->
+    <dialog id="modal-login" class="modal modal--login">
+      <button typ="button" class="modal__close" aria-label="닫기">
+        <img src="../../assets/icons/icon-delete.svg" alt="" />
+      </button>
+      <div class="modal__content">
+        <p class="modal__message">
+          로그인이 필요한 서비스입니다.<br />로그인 하시겠습니까?
+        </p>
+        <div class="modal__footer">
+          <button typ="button" class="modal__btn modal__btn--cancel">
+            아니요
+          </button>
+          <button typ="button" class="modal__btn modal__btn--confirm">
+            예
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

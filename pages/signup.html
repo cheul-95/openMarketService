@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HODU : 회원가입</title>
+    <meta name="description" content="HODU 오픈마켓 회원가입 페이지" />
+
+    <!-- 검색결과에 포함시키지 않기-->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <link rel="icon" href="../assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <header class="login-header">
+      <a href="/" class="login-header__link">
+        <img
+          src="../assets/icons/Logo-hodu.svg"
+          alt="호두"
+          class="login-header__icon"
+        />
+        <h1 class="sr-only">회원가입</h1>
+      </a>
+    </header>
+    <!-- 메인 -->
+    <main>
+      <!-- 어떤 유형의 회원으로 가입하는지 정하는 그룹 -->
+      <div class="login__type">
+        <button
+          type="button"
+          class="login__type-button login__type-button--buyer login__type-button--active"
+        >
+          구매회원가입
+        </button>
+        <button
+          type="button"
+          class="login__type-button login__type-button--seller"
+        >
+          판매회원가입
+        </button>
+      </div>
+
+      <!-- 회원가입을 위한 정보를 제출하는 섹션 -->
+      <section class="user-signup">
+        <form class="signup">
+          <div class="signup__form-content">
+            <input type="hidden" class="userType" value="BUYER" />
+            <div class="signup__container-id">
+              <label for="user-id">아이디</label>
+              <div class="signup__input-group">
+                <input type="text" id="user-id" />
+                <button type="button" class="signup__check-id">중복확인</button>
+              </div>
+              <p class="signup__message"></p>
+            </div>
+
+            <div class="signup__container-password">
+              <label for="user-password">비밀번호</label>
+              <div class="signup__input-group">
+                <input type="password" id="user-password" />
+                <span class="signup__icon"></span>
+              </div>
+              <p
+                class="signup__message signup__message--error"
+                id="user-password-message"
+              ></p>
+            </div>
+
+            <div class="signup__container-password">
+              <label for="check-password">비밀번호 재확인</label>
+              <div class="signup__input-group">
+                <input type="password" id="check-password" />
+                <span class="signup__icon"></span>
+              </div>
+              <p
+                class="signup__message signup__message--error"
+                id="check-password-message"
+              ></p>
+            </div>
+
+            <div class="signup__container-name">
+              <label for="user-name">이름</label>
+              <input type="text" id="user-name" />
+            </div>
+
+            <div class="signup__container--phone">
+              <label for="user-phoneNumber1">휴대폰번호</label>
+              <div class="signup__phone-group">
+                <select id="user-phoneNumber1">
+                  <option value="010">010</option>
+                  <option value="016">016</option>
+                  <option value="017">017</option>
+                  <option value="070">070</option>
+                </select>
+                <input
+                  type="tel"
+                  id="user-phoneNumber2"
+                  maxlength="4"
+                  required
+                />
+                <input
+                  type="tel"
+                  id="user-phoneNumber3"
+                  maxlength="4"
+                  required
+                />
+              </div>
+              <p id="user-phonenumber-status"></p>
+            </div>
+
+            <!-- 판매자 정보 -->
+            <div class="signup__seller-number-container">
+              <div class="signup__seller-number-container-input">
+                <label for="signup__seller-number">사업자 등록번호</label>
+                <input
+                  type="text"
+                  id="signup__seller-number"
+                  maxlength="12"
+                  placeholder="123-45-67890"
+                />
+              </div>
+              <button
+                type="button"
+                class="signup__seller-number-container-certify"
+              >
+                인증
+              </button>
+            </div>
+            <div class="signup__store-name__container">
+              <label for="signup__store-name">스토어 이름</label>
+              <input type="text" id="store-name" />
+            </div>
+            <!-- 여기까지 판매자 정보 -->
+          </div>
+          <div class="signup__agreement">
+            <input type="checkbox" id="agreement" />
+            <label for="agreement">
+              호두샵의 <a href="#">이용약관</a> 및
+              <a href="#">개인정보처리방침</a>에 대한 내용을 확인하였고
+              동의합니다.
+            </label>
+          </div>
+
+          <div class="join-button">
+            <button type="submit" id="join" disabled>가입하기</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/js/pages/signup/signup.js"></script>
+  </body>
+</html>

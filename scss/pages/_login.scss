@@ -1,0 +1,130 @@
+.login-header,
+.login__type,
+.login-form__wrap,
+.login-links {
+  display: flex;
+  justify-content: center;
+}
+
+.login-header {
+  margin-top: 100px;
+  &__icon {
+    width: 238px;
+    height: 74px;
+  }
+}
+
+.login__type {
+  margin-top: 70px;
+
+  &-button {
+    width: 275px;
+    height: 80px;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 20px;
+    z-index: 1;
+    background: #f2f2f2;
+  }
+
+  &-button--active {
+    position: relative;
+    z-index: 100;
+    border-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0px;
+      width: 100%;
+      border: 1px solid white;
+      height: 19px;
+      background: #fff;
+      z-index: 3;
+    }
+  }
+}
+
+.login__type-button--active.login__type-button--seller {
+  &::after {
+    left: -2px;
+  }
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  z-index: 10;
+  background-color: white;
+  &__wrap {
+    position: relative;
+    top: -20px;
+  }
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  #id,
+  #password,
+  .login__submit-button,
+  .error-message {
+    margin-left: 35px;
+    width: 480px;
+    height: 60px;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+  }
+  #id {
+    margin-top: 34px;
+    border: 0px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  #password {
+    margin-top: 6px;
+    border: 0px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  .login__submit-button {
+    margin-top: 36px;
+    margin-bottom: 36px;
+    background: #21bf48;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .error-message {
+    display: none;
+    align-content: center;
+    color: #eb5757;
+  }
+}
+.login-links {
+  margin-top: 10px;
+  a {
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    position: relative;
+    margin-right: 33px;
+    &:not(:first-child)::before {
+      content: "";
+      position: absolute;
+      left: -16.5px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 16px;
+      background-color: #333333;
+    }
+  }
+}

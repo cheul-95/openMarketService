@@ -1,0 +1,359 @@
+$main-color: #21bf48;
+$lightgray: #c4c4c4;
+$gray: #767676;
+$white: #ffffff;
+
+//fs : font-size
+$sm-fs: 1rem;
+$md-fs: 1.125rem;
+$lg-fs: 2.25rem;
+
+//fw : font-weight
+$default-fw: 400;
+$light-fw: 500;
+$heavy-fw: 700;
+
+.section-divider {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $lightgray;
+}
+
+.product-detail {
+  &__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 80px;
+    color: #000;
+  }
+
+  &__image {
+    width: 600px;
+    height: 600px;
+    margin-right: 50px;
+  }
+
+  &__summary {
+    min-width: 630px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__category {
+    font-size: $md-fs;
+    color: $gray;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-size: $lg-fs;
+    font-weight: $default-fw;
+    margin-bottom: 1.25rem;
+  }
+
+  &__price {
+    line-height: 45px;
+
+    :first-child {
+      font-size: $lg-fs;
+      font-weight: $heavy-fw;
+    }
+
+    :last-child {
+      font-size: $md-fs;
+    }
+  }
+
+  &__delivery-cost {
+    color: $gray;
+    font-size: $sm-fs;
+    margin: 138px 0 20px;
+  }
+
+  &__quantity {
+    margin: 30px 0;
+    height: 50px;
+    padding: 0;
+    display: flex;
+
+    & > * {
+      width: 50px;
+      border: 1px solid black;
+      margin: 0;
+    }
+
+    &-decrease {
+      border: 1px solid $lightgray;
+      border-radius: 5px 0 0 5px;
+      background-color: $white;
+      background-image: url(../assets/icons/icon-minus-line.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &-count {
+      border: 0;
+      border-top: 1px solid $lightgray;
+      border-bottom: 1px solid $lightgray;
+      text-align: center;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    &-increase {
+      border: 1px solid $lightgray;
+      border-radius: 0 5px 5px 0;
+      background-color: $white;
+      background-image: url(../assets/icons/icon-plus-line.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__stock-message {
+    display: none; // 기본적으로 숨김
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+  }
+
+  &__price-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: $md-fs;
+    margin: 46px 0 30px;
+
+    align-items: flex-end;
+
+    &-meta {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+
+  &__quantity-result {
+    color: $gray;
+    font-size: $md-fs;
+  }
+
+  &__price-label {
+    font-weight: $light-fw;
+    font-size: $md-fs;
+  }
+
+  &__quantity-count-result {
+    color: $main-color;
+    font-weight: $heavy-fw;
+  }
+
+  &__total-price {
+    color: $main-color;
+    display: inline-block;
+  }
+
+  &__price-number {
+    font-size: $lg-fs;
+    font-weight: $heavy-fw;
+  }
+
+  &__actions {
+    & > button {
+      height: 60px;
+      border: 0;
+      border-radius: 5px;
+      font-size: $md-fs;
+      font-weight: $heavy-fw;
+      color: $white;
+
+      &.deactivate {
+        background-color: $gray;
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__buy-now {
+    width: 416px;
+    margin-right: 14px;
+    background-color: $main-color;
+  }
+
+  &__add-to-cart {
+    width: 200px;
+    background-color: $gray;
+  }
+}
+
+#login-modal {
+  width: 360px;
+  height: 200px;
+  border: 1px solid $gray;
+  background-color: $white;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 26px;
+    margin-bottom: 15px;
+  }
+
+  .btns button {
+    width: 100px;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  #close-modal {
+    font-weight: $light-fw;
+    color: $gray;
+    border: 1px solid $lightgray;
+    background-color: #f0f0f0;
+  }
+  #close-modal:hover {
+    background-color: #e0e0e0;
+  }
+
+  #login {
+    background-color: $main-color;
+    font-weight: $light-fw;
+    color: $white;
+    border: 1px solid $main-color;
+  }
+  #login:hover {
+    background-color: darken($main-color, 10%);
+  }
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: none;
+
+  background-image: url("../../assets/icons/icon-delete.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.product-tab {
+  display: flex;
+  justify-content: center;
+
+  width: 1280px;
+  height: 60px;
+  margin: 140px auto 0;
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    flex: 0 0 25%;
+    height: 100%;
+    text-align: center;
+    line-height: 54px;
+  }
+
+  &__button {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: $gray;
+    position: relative;
+
+    &--active {
+      font-weight: 700;
+      color: $main-color;
+    }
+  }
+
+  &__underline {
+    display: block;
+    height: 6px;
+    background-color: $gray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    &--active {
+      background-color: $main-color;
+    }
+  }
+  &__content {
+    margin: 50px auto;
+    width: 1280px;
+  }
+}
+.divider {
+  margin: 0 11px;
+  color: $lightgray;
+}
+
+.xl-font {
+  font-size: $lg-fs;
+}

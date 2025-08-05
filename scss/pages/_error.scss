@@ -1,0 +1,68 @@
+.main__error {
+  height: 100vh;
+  align-content: center;
+
+  .main__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+  }
+
+  .main__error-img {
+    width: 276px;
+    height: 236px;
+  }
+
+  .main__error-text-wrap {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .main__error-text {
+      margin-bottom: 20px;
+      font-family: "Spoqa Han Sans Neo", sans-serif;
+      font-weight: 700;
+      font-style: bold;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    p {
+      font-family: "Spoqa Han Sans Neo", sans-serif;
+      margin-bottom: 40px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: #767676;
+    }
+  }
+
+  .main__error-link-wrap {
+    a {
+      display: inline-block;
+      width: 200px;
+      height: 60px;
+      text-decoration: none;
+      text-align: center;
+      align-content: center;
+      border-radius: 5px;
+      font-weight: 700;
+      font-style: bold;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .main__error-link-main {
+      margin-right: 14px;
+      border: 1px solid #21bf48;
+      background: #21bf48;
+      color: #ffffff;
+    }
+
+    .main__error-link-pre {
+      border: 1px solid #c4c4c4;
+      color: #767676;
+    }
+  }
+}

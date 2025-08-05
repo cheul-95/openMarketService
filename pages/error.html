@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 에러페이지 : HODU</title>
+    <meta
+      name="description"
+      content="페이지를 찾을 수 없습니다. 잘못된 접근 또는 삭제된 페이지입니다."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph (SNS 공유용) -->
+    <meta property="og:title" content="페이지를 찾을 수 없습니다 - 호두" />
+    <meta
+      property="og:description"
+      content="요청하신 페이지를 찾을 수 없습니다. 메인 페이지로 이동해주세요."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../assets/icons/icon-404.svg" />
+
+    <!-- 검색결과에 포함시키지 않기-->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+
+    <link rel="icon" href="../assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <main class="main__error">
+      <div class="main__wrap">
+        <img
+          class="main__error-img"
+          src="../assets/icons/icon-404.svg"
+          alt="에러 아이콘 "
+        />
+        <div class="main__error-text-wrap">
+          <h2 class="main__error-text">페이지를 찾을 수 없습니다.</h2>
+          <p>
+            페이지가 존재하지 않거나 사용할 수 없는 페이지입니다.<br />
+            웹 주소가 올바른지 확인해 주세요.
+          </p>
+          <div class="main__error-link-wrap">
+            <a href="/" class="main__error-link-main">메인으로</a>
+            <a href="javascript:history.back()" class="main__error-link-pre"
+              >이전으로</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

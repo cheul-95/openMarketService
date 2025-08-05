@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인페이지 : HODU</title>
+
+    <!-- 검색결과에 포함시키지 않기-->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <link rel="icon" href="../assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <header class="login-header">
+      <a href="/" class="login-header__link">
+        <img
+          src="../assets/icons/Logo-hodu.svg"
+          alt="호두"
+          class="login-header__icon"
+        />
+        <h1 class="sr-only">로그인</h1>
+      </a>
+    </header>
+    <section>
+      <div class="login__type">
+        <button
+          class="login__type-button login__type-button--buyer login__type-button--active"
+        >
+          구매회원 로그인
+        </button>
+        <button class="login__type-button login__type-button--seller">
+          판매회원 로그인
+        </button>
+      </div>
+    </section>
+    <div class="login-form__wrap">
+      <form class="login-form" id="login-form">
+        <input type="text" id="id" name="id" placeholder="아이디" />
+        <label for="id" class="sr-only">아이디</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="비밀번호"
+        />
+        <label for="password" class="sr-only">비밀번호</label>
+        <input type="hidden" name="userType" class="userType" value="BUYER" />
+        <p id="error" class="error-message" aria-live="polite"></p>
+        <button type="submit" class="login__submit-button">로그인</button>
+      </form>
+    </div>
+    <nav class="login-links">
+      <a href="/pages/signup.html">회원가입</a>
+      <a href="#">비밀번호 찾기</a>
+    </nav>
+    <script type="module" src="../js/pages/login/login.js"></script>
+  </body>
+</html>
