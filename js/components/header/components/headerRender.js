@@ -1,4 +1,4 @@
-import { isBuyer } from "./js/components/user.js";
+import { isBuyer } from "../../../js/components/user.js";
 //GNB 랜딩작업
 export function getHeaderGNB(loginStatus) {
   const $headerMenu = document.querySelector(".header__menu");
