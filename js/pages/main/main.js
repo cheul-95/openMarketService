@@ -17,8 +17,8 @@ async function loadComponent(elementId, filePath) {
 // 페이지 로드 시 헤더와 푸터 로드
 document.addEventListener("DOMContentLoaded", async function () {
   // 헤더와 푸터 로드
-  await loadComponent("header", "../../../pages/components/header.html");
-  await loadComponent("footer", "../../../pages/components/footer.html");
+  await loadComponent("header", "../pages/components/header.html");
+  await loadComponent("footer", "../pages/components/footer.html");
 
   // 헤더 로드 후 initHeader
   initHeader();
