@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-
+    <script>
+      if (location.hostname.includes("github.io")) {
+        document.write('<base href="/openMarketService/">');
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -30,7 +34,6 @@
     <header id="header"></header>
     <main>
       <section class="product-detail">
-
         <div class="product-detail__container">
           <!-- productDetailContainer.js -->
         </div>
@@ -43,16 +46,17 @@
         <div class="product-tab__content">
           <!-- menuTab.js -->
         </div>
-
-
       </section>
     </main>
 
     <footer id="footer"></footer>
 
-
     <dialog id="login-modal">
-      <button id="close-x-btn" class="modal-close-button" aria-label="닫기"></button>
+      <button
+        id="close-x-btn"
+        class="modal-close-button"
+        aria-label="닫기"
+      ></button>
       <p>로그인이 필요한 서비스입니다.</p>
       <p>로그인 하시겠습니까?</p>
       <div class="btns">
@@ -60,7 +64,9 @@
         <button id="login">네</button>
       </div>
     </dialog>
-    <script type="module" src="../js/pages/product_detail/productDetail.js"></script>
-
+    <script
+      type="module"
+      src="../js/pages/product_detail/productDetail.js"
+    ></script>
   </body>
 </html>

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <script>
+      if (location.hostname.includes("github.io")) {
+        document.write('<base href="/openMarketService/">');
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -58,14 +63,6 @@
 
     <!-- 파비콘 -->
     <link rel="icon" href="./assets/icons/favicon.ico" />
-
-    <!-- Base URL 설정 -->
-    <script>
-      if (location.hostname.includes("github.io")) {
-        document.write('<base href="/openMarketService/">');
-      }
-    </script>
-
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
