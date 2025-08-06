@@ -57,9 +57,9 @@
     <meta name="application-name" content="HODU" />
 
     <!-- 파비콘 -->
-    <link rel="icon" href="/assets/icons/favicon.ico" />
+    <link rel="icon" href="./assets/icons/favicon.ico" />
 
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <header id="header"></header>
@@ -67,11 +67,11 @@
       <!-- 캐러셀 섹션입니다. -->
       <section class="carousel-container">
         <button type="button" class="carousel-container_button1">
-          <img src="/assets/icons/icon-swiper-1.svg" alt="이전" />
+          <img src="./assets/icons/icon-swiper-1.svg" alt="이전" />
         </button>
         <ul class="carousel-slide"></ul>
         <button type="button" class="carousel-container_button2">
-          <img src="/assets/icons/icon-swiper-2.svg" alt="다음" />
+          <img src="./assets/icons/icon-swiper-2.svg" alt="다음" />
         </button>
         <div class="carousel-container_indicator"></div>
       </section>
@@ -81,26 +81,11 @@
       </section>
     </main>
     <footer id="footer"></footer>
-    <script type="module" src="/js/pages/main/main.js"></script>
+    <script type="module" src="./js/pages/main/main.js"></script>
     <!-- 1단계: 즉시 base 태그 삽입 -->
     <script>
       if (location.hostname.includes("github.io")) {
         document.write('<base href="/openMarketService/">');
-      }
-    </script>
-
-    <!-- 2단계: URL 체크 및 리다이렉트 -->
-    <script>
-      if (
-        location.hostname.includes("github.io") &&
-        !location.pathname.startsWith("/openMarketService/")
-      ) {
-        location.replace(
-          "/openMarketService" +
-            location.pathname +
-            location.search +
-            location.hash
-        );
       }
     </script>
   </body>

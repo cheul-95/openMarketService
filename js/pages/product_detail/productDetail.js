@@ -1,5 +1,5 @@
 //메인 페이지 js파일입니다.
-import { productDetail } from "/js/pages/product_detail/components/productDetailContainer.js";
+import { productDetail } from "./components/productDetailContainer.js";
 
 // 헤더와 푸터 로드
 async function loadComponent(elementId, filePath) {
@@ -12,7 +12,7 @@ async function loadComponent(elementId, filePath) {
   }
   //헤더가 그려지는 부분에서 import 진행시 돔요소 읽어 옴.
   if (elementId == "header") {
-    const { initHeader } = await import("/js/components/header/header.js");
+    const { initHeader } = await import("../../components/header/header.js");
     initHeader();
   }
 }
@@ -24,14 +24,14 @@ function getProductIdFromUrlParams() {
   if (productId) {
     return productId;
   } else {
-    window.location.href = "/pages/error.html";
+    window.location.href = "../../../pages/error.html";
     return null;
   }
 }
 
 // 페이지 로드 시 헤더와 푸터 로드
 document.addEventListener("DOMContentLoaded", async function () {
-  loadComponent("header", "/pages/components/header.html");
-  loadComponent("footer", "/pages/components/footer.html");
+  loadComponent("header", "../../../pages/components/header.html");
+  loadComponent("footer", "../../../pages/components/footer.html");
   productDetail(getProductIdFromUrlParams());
 });

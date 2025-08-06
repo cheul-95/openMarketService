@@ -1,6 +1,6 @@
-import { removeCartItem } from "/js/api/cart.js";
-import { checkStock } from "/js/api/product.js";
-import { cartSummaryPrice } from "/js/pages/cart/components/cartCalculator.js";
+import { removeCartItem } from "../../../api/cart.js";
+import { checkStock } from "../../../api/product.js";
+import { cartSummaryPrice } from "./cartCalculator.js";
 export function initCartEventHandlers() {
   const $allCheckBox = document.querySelector(".cart__header__checkbox-input");
   const $quantityDel = document.querySelectorAll(".cart-item__delete");
@@ -67,7 +67,7 @@ export async function handleOrderCartItem(element) {
   selectedItem.push({ prdId, qty, cartId });
   sessionStorage.setItem("orderList", JSON.stringify(selectedItem));
   sessionStorage.setItem("order_type", order_type);
-  window.location.href = `/pages/checkout.html`;
+  window.location.href = `../../../pages/checkout.html`;
 }
 // //체크된 제품 주문
 export async function handleOrderAllCartItem() {
@@ -103,5 +103,5 @@ export async function handleOrderAllCartItem() {
   sessionStorage.removeItem("orderList");
   sessionStorage.setItem("orderList", JSON.stringify(filteredItems));
   sessionStorage.setItem("order_type", order_type);
-  window.location.href = `/pages/checkout.html`;
+  window.location.href = `../../../pages/checkout.html`;
 }

@@ -1,6 +1,6 @@
-import { createCartOrder, createDirectOrder } from "/js/api/order.js";
-import { checkStock } from "/js/api/product.js";
-export function validationForm() {}
+import { createCartOrder, createDirectOrder } from "../../../api/order.js";
+import { checkStock } from "../../../api/product.js";
+import { validationForm } from "./checkoutValidation.js";
 export function confirmInfoAgreement() {
   //정보제공 동의
   const $confirm = document.querySelector(".payment-summary__confirm input");
@@ -36,7 +36,7 @@ export function orderEvent() {
       console.log(chStock, element.qty);
       if (element.qty > chStock) {
         alert("재고가 소진되었습니다.");
-        window.location.href = "/";
+        window.location.href = "../../../../index.html";
         return;
       }
     }

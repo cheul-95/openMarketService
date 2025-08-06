@@ -11,11 +11,11 @@ export function carouselControl() {
 
   //캐러셀 이미지 배열
   const carouselImage = [
-    "/assets/images/blankit.png",
-    "/assets/images/keyling.jpg",
-    "/assets/images/keyling2.jpg",
-    "/assets/images/pouch.jpg",
-    "/assets/images/sticker.jpg",
+    "../../../assets/images/blankit.png",
+    "../../../assets/images/keyling.jpg",
+    "../../../assets/images/keyling2.jpg",
+    "../../../assets/images/pouch.jpg",
+    "../../../assets/images/sticker.jpg",
   ];
   /**
    * @param button

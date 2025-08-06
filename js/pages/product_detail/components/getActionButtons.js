@@ -1,5 +1,5 @@
-import { showLoginModal } from "/js/pages/product_detail/components/showLoginModal.js";
-import { fetchWithAuth } from "/js/pages/login/api.js";
+import { showLoginModal } from "./showLoginModal.js";
+import { fetchWithAuth } from "../../login/api.js";
 
 export function getActionButtons(productId, stock) {
   function checkAuthAndUserType() {
@@ -12,7 +12,7 @@ export function getActionButtons(productId, stock) {
     if (!isLoggedIn) {
       showLoginModal(
         () => {
-          window.location.href = "/login.html";
+          window.location.href = "../../../../login.html";
         },
         () => {
           console.log("사용자가 로그인을 거부하거나 모달을 닫았습니다.");
@@ -110,7 +110,7 @@ export function getActionButtons(productId, stock) {
       );
 
       if (confirmMoveToCart) {
-        window.location.href = "/pages/cart.html";
+        window.location.href = "../../../../pages/cart.html";
       } else {
         console.log("장바구니 이동을 취소했습니다.");
       }
@@ -142,7 +142,7 @@ export function getActionButtons(productId, stock) {
     sessionStorage.setItem("orderList", JSON.stringify(orderData));
     sessionStorage.setItem("order_type", "direct_order");
 
-    window.location.href = "/pages/checkout.html";
+    window.location.href = "../../../../pages/checkout.html";
   }
 
   function setupEventListeners(containerElement) {

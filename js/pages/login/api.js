@@ -43,7 +43,7 @@ export async function refreshAccessToken() {
 function handleLogout() {
   clearAuth(); // localStorage 또는 sessionStorage에 저장된 토큰 삭제
   alert("로그인이 만료되었습니다. 다시 로그인해주세요.");
-  window.location.href = "/pages/login.html";
+  window.location.href = "../../../pages/login.html";
 }
 
 export async function fetchWithAuth(url, options = {}) {

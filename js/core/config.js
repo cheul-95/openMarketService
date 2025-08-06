@@ -201,7 +201,7 @@ function handleTokenExpired() {
     window.dispatchEvent(new CustomEvent("tokenExpired"));
 
     // 또는 직접 리다이렉트
-    // window.location.href = "/login";
+    // window.location.href = "../pages/login.html";
   }
 }
 
