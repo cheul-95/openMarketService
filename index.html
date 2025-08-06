@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <script src="/openMarketService/js/config.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -83,5 +82,26 @@
     </main>
     <footer id="footer"></footer>
     <script type="module" src="/js/pages/main/main.js"></script>
+    <!-- 1단계: 즉시 base 태그 삽입 -->
+    <script>
+      if (location.hostname.includes("github.io")) {
+        document.write('<base href="/openMarketService/">');
+      }
+    </script>
+
+    <!-- 2단계: URL 체크 및 리다이렉트 -->
+    <script>
+      if (
+        location.hostname.includes("github.io") &&
+        !location.pathname.startsWith("/openMarketService/")
+      ) {
+        location.replace(
+          "/openMarketService" +
+            location.pathname +
+            location.search +
+            location.hash
+        );
+      }
+    </script>
   </body>
 </html>
