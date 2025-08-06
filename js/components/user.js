@@ -1,4 +1,4 @@
-import { clearTokens, user } from "../core/config.js";
+import { clearTokens, user } from "/js/core/config.js";
 
 export function logout() {
   clearTokens();

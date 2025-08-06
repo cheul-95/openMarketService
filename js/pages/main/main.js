@@ -1,7 +1,7 @@
 //메인 페이지 js파일입니다.
-import { initHeader } from "../../components/header/header.js"; //
-import { carouselControl } from "./components/carousel.js";
-import { getProducts } from "./components/renderProduct.js";
+import { initHeader } from "/js/components/header/header.js"; //
+import { carouselControl } from "/js/pages/main/components/carousel.js";
+import { getProducts } from "/js/pages/main/components/renderProduct.js";
 
 // 헤더와 푸터 로드
 async function loadComponent(elementId, filePath) {
@@ -17,8 +17,8 @@ async function loadComponent(elementId, filePath) {
 // 페이지 로드 시 헤더와 푸터 로드
 document.addEventListener("DOMContentLoaded", async function () {
   // 헤더와 푸터 로드
-  await loadComponent("header", "./pages/components/header.html");
-  await loadComponent("footer", "./pages/components/footer.html");
+  await loadComponent("header", "/pages/components/header.html");
+  await loadComponent("footer", "/pages/components/footer.html");
 
   // 헤더 로드 후 initHeader
   initHeader();

@@ -1,5 +1,5 @@
-import { getProduct } from "../../../api/product.js";
-import { loadComponent } from "../../../components/loadComponent.js";
+import { getProduct } from "/js/api/product.js";
+import { loadComponent } from "/js/components/loadComponent.js";
 export async function chkCartItem() {
   let items = JSON.parse(sessionStorage.getItem("orderList")) || [];
   if (!Array.isArray(items)) {
@@ -11,8 +11,8 @@ export async function chkCartItem() {
   }
 }
 export async function checkoutRender() {
-  await loadComponent("header", "./components/header.html");
-  await loadComponent("footer", "./components/footer.html");
+  await loadComponent("header", "/pages/components/header.html");
+  await loadComponent("footer", "/pages/components/footer.html");
   let items = JSON.parse(sessionStorage.getItem("orderList")) || [];
   let allPrdPrice = 0;
   let allFeePrice = 0;

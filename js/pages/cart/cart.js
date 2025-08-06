@@ -1,13 +1,13 @@
-import { cartSummaryPrice } from "./components/cartCalculator.js";
-import { initCartEventHandlers } from "./components/cartEventHandlers.js";
+import { cartSummaryPrice } from "/js/pages/cart/components/cartCalculator.js";
+import { initCartEventHandlers } from "/js/pages/cart/components/cartEventHandlers.js";
 import {
   modalCalc,
   quantityModalOpen,
-} from "./components/cartModal.js";
+} from "/js/pages/cart/components/cartModal.js";
 import {
   cartRender,
   cartUserCheck,
-} from "./components/cartRenderer.js";
+} from "/js/pages/cart/components/cartRenderer.js";
 document.addEventListener("DOMContentLoaded", async function () {
   //권한 확인
   const userType = cartUserCheck();

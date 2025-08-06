@@ -1,5 +1,5 @@
-import { showLoginModal } from "./showLoginModal.js";
-import { fetchWithAuth } from "../../login/api.js";
+import { showLoginModal } from "/js/pages/product_detail/components/showLoginModal.js";
+import { fetchWithAuth } from "/js/pages/login/api.js";
 
 export function getActionButtons(productId, stock) {
   function checkAuthAndUserType() {

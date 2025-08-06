@@ -1,6 +1,6 @@
-import { removeCartItem } from "../../../api/cart.js";
-import { checkStock } from "../../../api/product.js";
-import { cartSummaryPrice } from "./cartCalculator.js";
+import { removeCartItem } from "/js/api/cart.js";
+import { checkStock } from "/js/api/product.js";
+import { cartSummaryPrice } from "/js/pages/cart/components/cartCalculator.js";
 export function initCartEventHandlers() {
   const $allCheckBox = document.querySelector(".cart__header__checkbox-input");
   const $quantityDel = document.querySelectorAll(".cart-item__delete");
