@@ -1,4 +1,4 @@
-import { logout } from "../../user.js";
+import { logout } from "./js/components/user.js";
 export function searchGNBEvent() {
   // 검색기능
   const $searchForm = document.querySelector(".header__search-form");

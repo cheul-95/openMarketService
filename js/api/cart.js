@@ -1,4 +1,4 @@
-import { request } from "../core/config.js";
+import { request } from "./js/core/config.js";
 
 /**
  * 장바구니 조회

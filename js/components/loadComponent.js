@@ -7,7 +7,7 @@ export async function loadComponent(elementId, filePath) {
     console.error(`Failed to load ${filePath}:`, error);
   }
   if (elementId == "header") {
-    const { initHeader } = await import("./header/header.js");
+    const { initHeader } = await import("./js/components/header/header.js");
     initHeader();
   }
 }
