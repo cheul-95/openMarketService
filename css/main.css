@@ -951,6 +951,13 @@ main {
   display: flex;
   flex-direction: column;
 }
+.product-item img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
 .product-item__text-container {
   margin-top: 16px;
   display: flex;
@@ -1384,12 +1391,14 @@ main {
   width: 550px;
   z-index: 10;
   background-color: white;
-  border: 1px solid #c4c4c4;
-  border-radius: 10px;
 }
 .login-form__wrap {
   position: relative;
   top: -20px;
+}
+.login-form {
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
 }
 .login-form #id,
 .login-form #password,
@@ -1612,14 +1621,16 @@ main {
 .signup__agreement {
   display: flex;
   gap: 10px;
-  justify-self: center;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  font-size: 14px;
 }
 .signup__agreement input {
   width: 16px;
   height: 16px;
+}
+.signup__agreement {
+  justify-self: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
 .signup__agreement label {
   width: 454px;
@@ -2096,4 +2107,6 @@ main {
   font-size: 24px;
   margin-bottom: 4px;
   cursor: not-allowed;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
